@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Business Rescue — Data Investigation Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+<button class="mute" id="muteBtn" aria-label="Toggle sound">🔊</button>
+
+<section class="screen active" id="startScreen">
+ <div class="hero container">
+  <div class="hero-card glass">
+   <div class="hero-content">
+    <div class="brand-logo"><img src="itvedant-logo.png" alt="I.T.VEDANT — Decode your dreams"></div>
+    <div class="kicker">Data Investigation Simulator</div>
+    <h1>BUSINESS<br>RESCUE</h1>
+    <p style="font-size:20px;max-width:720px;margin:0 auto">Can you save the business using data?</p>
+    <div class="instructions">
+      <span class="pill">🕵️ Find the signal</span><span class="pill">📈 Read the evidence</span>
+      <span class="pill">🎯 Find the root cause</span><span class="pill">💰 Manage the budget</span>
+      <span class="pill">🏆 Rescue the business</span>
+    </div>
+    <p>20-minute mission · Smart Board ready · No SQL or Excel formulas required</p>
+    <button class="btn large" id="startBtn">START GAME →</button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="screen" id="levelsScreen">
+ <div class="container">
+  <div style="text-align:center;margin:15px 0 30px">
+   <div class="kicker">The CEO needs answers.</div><h2>Choose Your Business Crisis</h2>
+   <p>Inspect visual evidence, make decisions, and rescue the company.</p>
+  </div>
+  <div class="grid level-grid" id="levelGrid"></div>
+ </div>
+</section>
+
+<section class="screen" id="gameScreen">
+ <div class="container">
+  <div class="topbar glass">
+   <div class="business"><small class="small">BUSINESS WAR ROOM</small><strong id="hudBusiness">—</strong><div class="progress"><i id="hudProgress"></i></div></div>
+   <div class="metric"><small>Level</small><strong id="hudLevel">1</strong></div>
+   <div class="metric"><small>Score</small><strong id="hudScore">0</strong></div>
+   <div class="metric"><small>Budget</small><strong id="hudBudget">₹0</strong></div>
+   <div class="metric"><small>Time</small><strong id="hudTime">20:00</strong></div>
+  </div>
+  <div class="game-shell">
+   <main class="main-panel glass" id="gameMain"></main>
+   <aside class="side-panel glass" id="sidePanel"></aside>
+  </div>
+ </div>
+</section>
+</div>
+
+<div class="overlay" id="overlay"><div class="modal glass" id="modal"></div></div>
+<div class="toast" id="toast"></div>
+<div class="confetti" id="confetti"></div>
+
+<script src="game.js"></script>
+</body>
+</html>
